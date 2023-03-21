@@ -9,9 +9,7 @@ export default function Details({info}) {
         setLoading(true);
         fetch(`https://raw.githubusercontent.com/netology-code/ra16-homeworks/master/hooks-context/use-effect/data/${info.id}.json`)
             .then((response) => response.json())
-            .then((data) => {
-                console.info(data);
-                setUser(data)})
+            .then((data) => setUser(data))
             .finally(() => setLoading(false));
     },[info.id])
 

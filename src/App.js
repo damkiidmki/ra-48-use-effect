@@ -18,7 +18,6 @@ function App() {
   }, []);
 
   const handleClick = (id) => {
-    console.info(id);
     const getUserById = users.find(user => user.id === id);
     setUser(getUserById);
   }
